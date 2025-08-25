@@ -14,5 +14,6 @@ require_once FOODDY_DIR_PATH . '/inc/helpers/autoloader.php';
 function fooddy_get_theme_instace()
 {
 	\FOODDY_THEME\Inc\Assets::get_instance();
+	\FOODDY_THEME\Inc\FOODDY_THEME::get_instance();
 }
 fooddy_get_theme_instace();

@@ -4,8 +4,9 @@
 
 	<div class="flex px-2 w-full md:w-fit justify-between">
 		<div class="flex gap-2">
-			<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.svg'); ?>"
-				alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
+			<?php if ('the_custom_logo') {
+				the_custom_logo();
+			}  ?>
 			<h3 class="font-bold" id="title">
 				<?php echo esc_html('Cooking'); ?><br />
 				<?php echo esc_html('Delight'); ?>
