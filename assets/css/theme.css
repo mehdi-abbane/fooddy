@@ -1,0 +1,42 @@
+:root {
+	/* Base */
+	--color-surface: #fffbf2;
+	/* Light background */
+	--color-background: #f0ebe1;
+	/* Neutral surface */
+	--color-text: #262522;
+	/* Primary text */
+
+	/* Brand / Accents */
+	--color-primary: #9fdc26;
+	/* Primary brand (green) */
+	--color-secondary: #f29c33;
+	/* Secondary brand (orange) */
+	--color-accent: #ee6352;
+	/* Accent / highlight (red-coral) */
+
+	/* Supporting */
+	--color-info: #c4e5fc;
+	/* Info / subtle blue */
+	--color-muted: #e5ded0;
+	/* Muted border/shade (optional, derived from surface) */
+	--color-background-rgb: 255, 251, 242;
+	/* Light background (#FFFBF2) */
+	--color-surface-rgb: 240, 235, 225;
+	/* Neutral surface (#F0EBE1) */
+	--color-text-rgb: 38, 37, 34;
+	/* Primary text (#262522) */
+
+	/* Brand / Accents */
+	--color-primary-rgb: 159, 220, 38;
+	/* Primary brand (green #9FDC26) */
+	--color-secondary-rgb: 242, 156, 51;
+	/* Secondary brand (orange #F29C33) */
+	--color-accent-rgb: 238, 99, 82;
+	/* Accent / highlight (red-coral #EE6352) */
+
+	/* Supporting */
+	--color-info-rgb: 196, 229, 252;
+	/* Info / subtle blue (#C4E5FC) */
+	--color-muted-rgb: 229, 222, 208;
+}

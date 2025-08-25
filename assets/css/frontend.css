@@ -1,0 +1,16 @@
+html {
+	padding: 0 !important;
+}
+
+.nav-item {
+	font-weight: bold;
+}
+
+.nav-item:hover {
+	border-bottom: 3px solid var(--color-accent);
+}
+
+.diverse-item {
+	border-bottom: 1px solid rgba(var(--color-text-rgb), 0.5);
+	width: 100%;
+}

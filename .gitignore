@@ -1,0 +1,73 @@
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# Node / Build tools
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+/dist
+/build
+/.cache
+/.parcel-cache
+/.next
+/.nuxt
+/.turbo
+/.sass-cache
+/.stylelintcache
+
+# =========================
+# Composer / PHP tools
+# =========================
+vendor/
+composer.lock
+
+# =========================
+# WordPress generated files
+# (don’t commit uploads or core)
+# =========================
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+
+# =========================
+# Theme-specific
+# =========================
+/assets/css/*.map
+/assets/js/*.map
+/assets/css/*.min.css
+/assets/js/*.min.js
+
+# If you compile Tailwind or SCSS, ignore raw build cache
+/.tmp
+/.sass-cache
+/.postcss-cache
+
+# =========================
+# Env / config
+# =========================
+.env
+.env.*
+*.local
+*.config.js.local
+*.secret
+
+
