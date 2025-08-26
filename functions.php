@@ -10,10 +10,17 @@ if (!defined('FOODDY_DIR_PATH')) {
 if (!defined('FOODDY_DIR_URI')) {
 	define('FOODDY_DIR_URI', untrailingslashit(get_template_directory_uri()));
 }
+
 require_once FOODDY_DIR_PATH . '/inc/helpers/autoloader.php';
+
+if (! function_exists('debugger')) {
+	function debugger()
+	{
+		return \FOODDY_THEME\Inc\Debug::get_instance();
+	}
+}
 function fooddy_get_theme_instace()
 {
-	\FOODDY_THEME\Inc\Assets::get_instance();
 	\FOODDY_THEME\Inc\FOODDY_THEME::get_instance();
 }
 fooddy_get_theme_instace();

@@ -32,9 +32,9 @@ class Assets
 	public function enqueue_styles()
 	{
 		wp_enqueue_style('stylesheet', FOODDY_DIR_URI . '/style.css');
-		wp_enqueue_style('tailwindcss-css', FOODDY_DIR_URI . '/assets/css/output.css');
-		wp_enqueue_style('theme-css', FOODDY_DIR_URI . '/assets/css/theme.css');
-		wp_enqueue_style('front-end-css', FOODDY_DIR_URI . '/assets/css/frontend.css');
+		wp_enqueue_style('tailwindcss', FOODDY_DIR_URI . '/assets/css/output.css');
+		wp_enqueue_style('theme', FOODDY_DIR_URI . '/assets/css/theme.css');
+		wp_enqueue_style('front-end', FOODDY_DIR_URI . '/assets/css/frontend.css');
 	}
 
 	/**
@@ -42,13 +42,36 @@ class Assets
 	 */
 	public function enqueue_scripts()
 	{
+
 		wp_enqueue_script(
-			'button-toggle',
-			FOODDY_DIR_URI . '/assets/js/button_toggle.js',
+			'dfine-elements',
+			FOODDY_DIR_URI . '/assets/js/define-elements.js',
 			array(),
-			filemtime(FOODDY_DIR_PATH . '/assets/js/button_toggle.js'),
+			null,
 			array(
-				'in_footer' => true,
+				'in_footer' => false,
+				'strategy'  => 'defer',
+			)
+
+		);
+		wp_enqueue_script(
+			'apline',
+			FOODDY_DIR_URI . '/assets/js/alpine.js',
+			array(),
+			null,
+			array(
+				'in_footer' => false,
+				'strategy'  => 'defer',
+			)
+
+		);
+		wp_enqueue_script(
+			'alpine-js',
+			'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js',
+			array(),
+			null,
+			array(
+				'in_footer' => false,
 				'strategy'  => 'defer',
 			)
 		);
