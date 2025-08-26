@@ -8,13 +8,6 @@
 
 namespace FOODDY_THEME\Inc\Helpers;
 
-/**
- * Auto loader function.
- *
- * @param string $resource Source namespace.
- *
- * @return void
- */
 function autoloader($resource = '')
 {
 	$resource_path  = false;

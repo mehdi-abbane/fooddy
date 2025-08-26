@@ -1,13 +1,27 @@
-html {
-	padding: 0 !important;
+* {
+	/* outline: 1px dotted red; */
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#header-nav-menu {
+	transition: all 150ms;
 }
 
 .nav-item {
 	font-weight: bold;
+
+	border-bottom: 5px solid var(--color-surface);
+	transition: all 150ms;
 }
 
 .nav-item:hover {
-	border-bottom: 3px solid var(--color-accent);
+	border-bottom: 5px solid var(--color-accent);
 }
 
 .diverse-item {

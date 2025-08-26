@@ -7,5 +7,5 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="p-1 md:px-[64px]" style="background-color: var(--color-background);">
+<body x-data="global" style="background-color: var(--color-background);">
 	<?php get_template_part('template-parts/header/site-header'); ?>
