@@ -1,7 +1,7 @@
 document.addEventListener("alpine:init", () => {
   Alpine.data("global", () => ({
     show_nav_menu: is_win_large,
-    show_nav_list: is_win_large,
+    show_nav_list: is_win_large ? true : false,
     high_res_img_loaded: false,
     show_search_bar: false,
     show_search_bar_mobile: false,
