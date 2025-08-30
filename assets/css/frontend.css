@@ -2,26 +2,30 @@
 	/* outline: 1px dotted red; */
 }
 
-html,
-body {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+.custom-logo-link {
+	width: 50px;
 }
 
-#header-nav-menu {
-	transition: all 150ms;
+.menu-nav-item {
+	border-bottom: 3px solid transparent;
 }
 
-.nav-item {
-	font-weight: bold;
-
-	border-bottom: 5px solid var(--color-surface);
-	transition: all 150ms;
+.menu-nav-item:hover {
+	border-bottom-color: var(--color-accent);
 }
 
-.nav-item:hover {
-	border-bottom: 5px solid var(--color-accent);
+@media (min-width: 640px) {
+
+	/*some this is for sub items for screens that are 640px or greater*/
+	.sub-menu-item-div {
+		background-color: var(--color-surface);
+	}
+
+	.menu-nav-item div:hover {
+		color: var(--color-text);
+	}
+
+	.sub-menu-item-div:hover {}
 }
 
 .diverse-item {

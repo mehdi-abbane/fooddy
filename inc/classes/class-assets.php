@@ -44,26 +44,35 @@ class Assets
 	{
 
 		wp_enqueue_script(
-			'dfine-elements',
-			FOODDY_DIR_URI . '/assets/js/define-elements.js',
+			'dfine-vars',
+			FOODDY_DIR_URI . '/assets/js/define-vars.js',
 			array(),
 			null,
 			array(
-				'in_footer' => false,
+				'in_footer' => true,
 				'strategy'  => 'defer',
 			)
-
 		);
 		wp_enqueue_script(
 			'apline',
 			FOODDY_DIR_URI . '/assets/js/alpine.js',
-			array(),
+			['jquery'],
 			null,
 			array(
-				'in_footer' => false,
+				'in_footer' => true,
 				'strategy'  => 'defer',
 			)
+		);
 
+		wp_enqueue_script(
+			'initialize',
+			FOODDY_DIR_URI . '/assets/js/initialize.js',
+			['jquery'],
+			null,
+			array(
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			)
 		);
 		wp_enqueue_script(
 			'alpine-js',
@@ -71,7 +80,7 @@ class Assets
 			array(),
 			null,
 			array(
-				'in_footer' => false,
+				'in_footer' => true,
 				'strategy'  => 'defer',
 			)
 		);
