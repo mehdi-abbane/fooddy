@@ -95,7 +95,7 @@ class Menus
             $mobile_indent_px = min($level * 10, 60); // 10px per level, max 60px
             ?>
 
-<li class="w-full menu-nav-item transition-all duration-150 <?php echo esc_attr($is_sub ? 'sub-menu-item-li px-2 py-1' : '') ?>  relative"
+<li class="w-full menu-nav-item transition-all border-b-2 border-[transparent] hover:border-[var(--color-accent)] duration-150 <?php echo esc_attr($is_sub ? 'sub-menu-item-li px-2 py-1' : '') ?>  relative"
     x-data="{ open: false }" @click.outside="open = false" @mouseleave="if (is_win_large) { open = false }">
     <div class="flex items-center w-full p-1 <?php echo esc_attr($is_sub ? 'sub-menu-item-div' : '') ?>">
         <a href="<?php echo esc_url($menu_item->url); ?>" class="a-items-in-menus block transition-colors
