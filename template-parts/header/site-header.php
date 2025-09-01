@@ -1,6 +1,5 @@
 <header id="header-nav"
-    class="flex p-4 flex-col md:flex-row  h-fit rounded-full bg-transparent md:h-fit transition-all duration-150 my-2 mx-15"
-    style="border: 2px solid rgba(var(--color-text-rgb), 0.24);">
+    class="flex p-4 flex-col md:flex-row  h-fit rounded-full bg-transparent md:h-fit transition-all duration-150 my-2 mx-15 border-2 border-[var(--border)]">
 
     <div class="flex px-2 w-full md:w-fit items-center justify-between">
         <div class="flex gap-2 items-center">
