@@ -1,4 +1,5 @@
 :root {
+	--border: rgba(var(--color-text-rgb), 0.24);
 	/* Base */
 	--color-surface: #fffbf2;
 	/* Light background */

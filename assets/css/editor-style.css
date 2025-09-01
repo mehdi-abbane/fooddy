@@ -1,0 +1,10 @@
+#fooddy-recipe-options label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#fooddy-prep-time {
+	width: 60px;
+	height: 20px;
+}

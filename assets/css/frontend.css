@@ -6,12 +6,8 @@
 	width: 50px;
 }
 
-.menu-nav-item {
-	border-bottom: 3px solid transparent;
-}
-
-.menu-nav-item:hover {
-	border-bottom-color: var(--color-accent);
+.edit-post-meta-boxes-main {
+	background-color: red;
 }
 
 @media (min-width: 640px) {
@@ -24,8 +20,6 @@
 	.menu-nav-item div:hover {
 		color: var(--color-text);
 	}
-
-	.sub-menu-item-div:hover {}
 }
 
 .diverse-item {
