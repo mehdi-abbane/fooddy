@@ -45,7 +45,7 @@ class Meta_Boxes
         <?php echo esc_html('Preparation Time (minutes): '); ?>
     </span>
     <input type="number" id="fooddy-prep-time" name="fooddy-prep-time-field"
-        value="<?php echo esc_attr($prep_time) ?>" min="1" />
+        value="<?php echo esc_attr($prep_time) ?>" min="1" required />
 </label>
 <br />
 <label for="fooddy-serves">
@@ -53,7 +53,7 @@ class Meta_Boxes
         <?php echo esc_html('Serves: '); ?>
     </span>
     <input type="number" id="fooddy-serves" name="fooddy-serves-field" value="<?php echo esc_attr($serves) ?>"
-        min="1" />
+        min="1" required />
 </label>
 <br>
 <label for="fooddy-is-vegan">
@@ -62,7 +62,7 @@ class Meta_Boxes
     </span>
     <input type="checkbox" id="fooddy-is-vegan" name="fooddy-is-vegan-field" value="1" <?php checked(
         $is_vegan, '1'
-                                                                                       ); ?> />
+                                                                                       ); ?> required />
 
 </label>
 <br />
@@ -72,7 +72,7 @@ class Meta_Boxes
         <?php echo esc_html('Preparation Level:'); ?>
     </span>
 
-    <select name="fooddy-prep-level-field" id="fooddy-prep-level-field">
+    <select name="fooddy-prep-level-field" id="fooddy-prep-level-field" required>
         <option value="easy" <?php selected($prep_lvl, 'easy'); ?>>Easy</option>
         <option value="medium" <?php selected($prep_lvl, 'medium'); ?>>Medium</option>
         <option value="advanced" <?php selected($prep_lvl, 'advanced'); ?>>Advanced</option>
