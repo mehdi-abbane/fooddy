@@ -1,30 +1,30 @@
 <div class="relative w-full h-[600px] overflow-hidden rounded-[40px]">
 
-	<!-- Background image -->
-	<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-bg-low.jpg'); ?>"
-		alt="<?php echo esc_attr__('Low-res preview hero background image', 'your-textdomain'); ?>"
-		class="absolute inset-0 w-full h-full object-cover blur-sm scale-105 transition-opacity duration-700"
-		:class="{ 'opacity-0': high_res_img_loaded, 'opacity-100': !high_res_img_loaded }" />
+    <!-- Background image -->
+    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-bg-low.jpg'); ?>"
+        alt="<?php echo esc_attr__('Low-res preview hero background image', 'your-textdomain'); ?>"
+        class="absolute inset-0 w-full h-full object-cover blur-sm scale-105 transition-opacity duration-700"
+        :class="{ 'opacity-0': high_res_img_loaded, 'opacity-100': !high_res_img_loaded }" />
 
-	<!-- High-res image -->
-	<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-bg.jpg'); ?>"
-		alt="<?php echo esc_attr__('Hero background image', 'your-textdomain'); ?>"
-		class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"
-		@load.window="high_res_img_loaded = true" :class="{ 'opacity-100': high_res_img_loaded }" />
-	<!-- Black overlay -->
-	<div class="absolute inset-0 bg-black/50 -z-0"></div>
+    <!-- High-res image -->
+    <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/hero-bg.jpg'); ?>"
+        alt="<?php echo esc_attr__('Hero background image', 'your-textdomain'); ?>"
+        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700"
+        @load.window="high_res_img_loaded = true" :class="{ 'opacity-100': high_res_img_loaded }" />
+    <!-- Black overlay -->
+    <div class="absolute inset-0 bg-black/50 -z-0"></div>
 
-	<div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 gap-5">
-		<h3 class="font-bold text-[90px] leading-tight text-[var(--color-surface)]">
-			<?php echo nl2br(esc_html__("Unleash Culinary \nExcellence", 'your-textdomain')); ?>
-		</h3>
-		<p class="mt-4 max-w-3xl text-xl text-[var(--color-surface)]">
-			<?php echo nl2br(esc_html__("Explore a world of flavors, discover \nhandcrafted recipes, and let the aroma of \nour passion for cooking fill your kitchen", 'your-textdomain')); ?>
-		</p>
-		<button class="p-2 rounded-full font-bold"
-			style="color: var(--color-text); background-color: var(--color-secondary);">
-			<?php echo esc_html__('EXPLORE RECIPES', 'your-textdomain'); ?>
-		</button>
-	</div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 gap-5">
+        <h3 class="font-bold text-[30px] md:text-[90px] leading-tight text-[var(--color-surface)]">
+            <?php echo nl2br(esc_html__("Unleash Culinary \nExcellence", 'your-textdomain')); ?>
+        </h3>
+        <p class="mt-4 max-w-3xl text-xl text-[var(--color-surface)]">
+            <?php echo nl2br(esc_html__("Explore a world of flavors, discover \nhandcrafted recipes, and let the aroma of \nour passion for cooking fill your kitchen", 'your-textdomain')); ?>
+        </p>
+        <button class="p-2 rounded-full font-bold"
+            style="color: var(--color-text); background-color: var(--color-secondary);">
+            <?php echo esc_html__('EXPLORE RECIPES', 'your-textdomain'); ?>
+        </button>
+    </div>
 
 </div>

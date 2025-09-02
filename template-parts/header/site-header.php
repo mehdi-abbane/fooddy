@@ -1,5 +1,6 @@
 <header id="header-nav"
-    class="flex p-4 flex-col md:flex-row  h-fit rounded-full bg-transparent md:h-fit transition-all duration-150 my-2 mx-15 border-2 border-[var(--border)]">
+    class="flex p-4 flex-col md:flex-row  h-fit rounded-full bg-transparent md:h-fit transition-all duration-150 border-2 border-[var(--border)]"
+    :class="(!is_win_large) ? 'm-5' : 'm-15'">
 
     <div class="flex px-2 w-full md:w-fit items-center justify-between">
         <div class="flex gap-2 items-center">
