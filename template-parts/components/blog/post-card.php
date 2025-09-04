@@ -33,7 +33,7 @@ $index = $args['index']
         <div class="flex gap-3 items-center text-[var(--color-text)]">
 
             <span>
-                <?php echo esc_html(format_prep_time($prep_time)) ?>
+                <?php echo esc_html(format_time($prep_time)) ?>
             </span>
             <span>
                 <?php echo esc_html($prep_lvl) ?> PREP

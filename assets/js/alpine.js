@@ -17,6 +17,9 @@ document.addEventListener("alpine:init", () => {
 
 			this.$refs.featured_scroll.scrollTo({ left: 0, behavior: "smooth" });
 			this.current_slide = 0;
+			const featured_posts =
+				document.querySelector(".featured-recipes").childElementCount;
+			this.total_slides = featured_posts / 2;
 		},
 		toggleNavMenu() {
 			this.show_nav_menu = !this.show_nav_menu;
@@ -50,7 +53,7 @@ document.addEventListener("alpine:init", () => {
 			this.$refs.featured_scroll.scrollBy({ left: -300, behavior: "smooth" });
 		},
 		scrollRight() {
-			if (this.current_slide == this.total_slides) return;
+			if (this.current_slide >= this.total_slides) return;
 			console.log("right");
 			this.current_slide++;
 			this.$refs.featured_scroll.scrollBy({ left: 300, behavior: "smooth" });

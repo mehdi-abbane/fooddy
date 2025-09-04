@@ -3,5 +3,6 @@
     <?php get_template_part('template-parts/components/hero'); ?>
     <?php get_template_part('template-parts/components/diverse-palette'); ?>
     <?php get_template_part('template-parts/components/blog/featured-recipes'); ?>
+    <?php get_template_part('template-parts/components/embrak-on-journey'); ?>
 </main>
 <?php get_footer() ?>

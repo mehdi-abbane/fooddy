@@ -20,21 +20,18 @@ $featured_query = new WP_Query($args);
         </h3>
         <div class="flex gap-2">
 
-            <button class="rotate-180" @click="scrollLeft"
-                :class="current_slide == 0 && 'opacity-50'">
+            <button class="rotate-180" @click="scrollLeft" :class="current_slide == 0 && 'opacity-50'">
                 <img src="<?php echo esc_url(FOODDY_DIR_URI . '/assets/images/arrow-featured.svg'); ?>"
                     alt="">
             </button>
-	    <button @click="scrollRight"
-:class="current_slide == total_slides-1 && 'opacity-50'"
->
+            <button @click="scrollRight" :class="current_slide == total_slides-1 && 'opacity-50'">
 
                 <img src="<?php echo esc_url(FOODDY_DIR_URI . '/assets/images/arrow-featured.svg'); ?>"
                     alt="">
             </button>
         </div>
     </div>
-    <div class="flex gap-4 overflow-scroll w-full relative snap-start snap-mandatory snap-x md:p-5"
+    <div class="flex gap-4 overflow-scroll w-full relative snap-start snap-mandatory snap-x md:p-5 featured-recipes"
         x-ref="featured_scroll">
 
         <?php
