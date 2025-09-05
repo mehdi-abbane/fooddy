@@ -14,9 +14,10 @@ $prep_lvl = get_post_meta($post_id, '_prep_time', true);
 $title = get_the_title($post_id);
 $escerpt = get_the_excerpt($post_id);
 $serves = get_post_meta($post_id, '_serves', true);
-$index = $args['index']
+$index = $args['index'];
+$width = $args['width'];
 ?>
-<article class="rounded-4xl bg-[var(--color-surface)]  overflow-hidden relative flex flex-col gap-5  w-full md:w-1/2  shrink-0 md:snap-start transition-transform duration-500 post-card snap-start"
+<article class="post-card rounded-4xl bg-[var(--color-surface)]  overflow-hidden relative flex flex-col gap-5 shrink-0 md:snap-start transition-transform duration-500 snap-start w-full <?php echo esc_attr($width) ?>"
     data-index="<?php echo esc_html($index); ?>" data-index="<?php echo esc_attr($index) ?>">
     <?php if ($has_post_thumbnail) { ?>
     <img class="h-[234px] w-full md:h-[243px] object-cover" src="<?php echo esc_url($has_post_thumbnail) ?>" alt="">
