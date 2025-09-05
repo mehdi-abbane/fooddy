@@ -2,7 +2,7 @@ document.addEventListener("alpine:init", () => {
 	Alpine.data("global", () => ({
 		is_win_large: is_win_large,
 		current_slide: 0,
-		total_slides: is_win_large ? 3 : 4,
+		total_slides: is_win_large ? 2 : 4,
 		show_nav_menu: is_win_large,
 		show_nav_list: is_win_large,
 		high_res_img_loaded: false,
@@ -13,13 +13,14 @@ document.addEventListener("alpine:init", () => {
 				a_items_in_menus.forEach(
 					(el, i) => (el.style.paddingLeft = `${el.dataset.indent}px`),
 				);
+
+				this.total_slides = featuredRecipes;
+			} else {
+				this.total_slides = featuredRecipes / 2;
 			}
 
 			this.$refs.featured_scroll.scrollTo({ left: 0, behavior: "smooth" });
 			this.current_slide = 0;
-			const featured_posts =
-				document.querySelector(".featured-recipes").childElementCount;
-			this.total_slides = featured_posts / 2;
 		},
 		toggleNavMenu() {
 			this.show_nav_menu = !this.show_nav_menu;
@@ -49,14 +50,20 @@ document.addEventListener("alpine:init", () => {
 		scrollLeft() {
 			if (this.current_slide == 0) return;
 			console.log("left");
-			this.current_slide--;
-			this.$refs.featured_scroll.scrollBy({ left: -300, behavior: "smooth" });
+			this.current_slide -= this.is_win_large ? 2 : 1;
+			this.$refs.featured_scroll.scrollBy({
+				left: -(scrollAmount * (this.is_win_large ? 2 : 1)),
+				behavior: "smooth",
+			});
 		},
 		scrollRight() {
-			if (this.current_slide >= this.total_slides) return;
+			if (this.current_slide == this.total_slides) return;
 			console.log("right");
-			this.current_slide++;
-			this.$refs.featured_scroll.scrollBy({ left: 300, behavior: "smooth" });
+			this.current_slide += this.is_win_large ? 2 : 1;
+			this.$refs.featured_scroll.scrollBy({
+				left: scrollAmount * (this.is_win_large ? 2 : 1),
+				behavior: "smooth",
+			});
 		},
 	}));
 });
